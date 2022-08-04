@@ -9,6 +9,7 @@ body {
   background-color: #000;
   font-family: "Inter", sans-serif;
   color: #fff;
+  overflow: hidden;
 }
 
 span {
@@ -19,15 +20,19 @@ span {
   padding: 100px 50px;
 }
 
+.scrollEnable {
+  overflow: scroll !important;
+}
+
 /*=================*/
 nav {
   width: 100%;
   height: 80px;
   background: rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(1.5px);
-          backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   position: fixed;
-  z-index: 1;
+  z-index: 2;
 }
 nav img {
   position: absolute;
@@ -48,13 +53,17 @@ header {
   justify-content: center;
 }
 
-.headerText {
+.headerTextContainer {
   z-index: 1;
+  display: flex;
 }
-.headerText h1 {
+.headerTextContainer h1,
+.headerTextContainer span {
+  font-size: 5vw;
+}
+.headerTextContainer h1 {
   font-family: "Syne", sans-serif;
   text-transform: uppercase;
-  font-size: 6rem;
 }
 
 .headerImgLeft {
@@ -67,6 +76,14 @@ header {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.myWork {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*=================ANIMATIONS=================*/

@@ -7,24 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sebly portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://css.gg/arrow-up-r.css' rel='stylesheet'>
     <script src="js/script.js" defer></script>
 </head>
 
 <body>
     <nav>
-        <img src="images/s-logo.png" alt="Sebly logo">
+        <img src="images/s-logo.png" alt="Sebly logo" class="logo">
     </nav>
-    <header>
-        <div class="headerImages">
-            <img src="images/bg-pattern-intro-left-desktop.svg" alt=" " class="headerImgLeft">
-            <img src="images/bg-pattern-intro-right-desktop.svg" alt=" " class="headerImgRight">
-        </div>
-        <div class="headerText">
-            <h1 class="padding-left-xl">recent work <span class="bounce">👇</span>
-            </h1>
-        </div>
-    </header>
+    <main class="content">
+        <header>
+            <div class="headerImages">
+                <img src="images/bg-pattern-intro-left-desktop.svg" alt=" " class="headerImgLeft">
+                <img src="images/bg-pattern-intro-right-desktop.svg" alt=" " class="headerImgRight">
+            </div>
+            <div class="headerTextContainer">
+                <h1 class="headerText">recent work</h1><span class="headerIcon bounce">👇</span>
+            </div>
+        </header>
+        <section class="myWork">
+            <h1>soon.</h1>
+        </section>
+    </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 </body>
 
 </html>
