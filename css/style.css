@@ -14,25 +14,26 @@ body {
 
 span {
   display: inline-block;
+  vertical-align: super;
+  font-size: 1rem;
+  margin-left: 5px;
 }
 
 .container {
-  padding: 100px 50px;
+  padding: 300px 10vw;
 }
 
 .scrollEnable {
-  overflow: scroll !important;
+  overflow: auto !important;
 }
 
-/*=================*/
+/*=================HEADER=================*/
 nav {
   width: 100%;
   height: 80px;
-  background: rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
   position: fixed;
   z-index: 2;
+  transition: 0.5s ease;
 }
 nav img {
   position: absolute;
@@ -45,12 +46,24 @@ nav img {
   width: auto;
 }
 
+nav.scroll {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
 header {
   height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #000;
+  background-image: url(../images/bg2.jpg);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%), url(../images/bg2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .headerTextContainer {
@@ -59,11 +72,16 @@ header {
 }
 .headerTextContainer h1,
 .headerTextContainer span {
-  font-size: 5vw;
+  font-size: 4rem;
 }
 .headerTextContainer h1 {
   font-family: "Syne", sans-serif;
   text-transform: uppercase;
+}
+
+.headerImages img {
+  height: 50vh;
+  width: auto;
 }
 
 .headerImgLeft {
@@ -78,64 +96,99 @@ header {
   right: 0;
 }
 
-.myWork {
-  min-height: 100vh;
+/*=================PORTFOLIO=================*/
+.portfolioContainer {
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.portfolioContainer h2 {
+  font-family: "Syne", sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  display: inline-block;
+}
+.portfolioContainer h2::after {
+  content: "";
+  border-bottom: 10px solid #8a88fb;
+  width: 100%;
+  display: block;
+  margin: -18px auto;
+  margin-left: 2px;
+}
+
+.projectsContainer {
+  counter-reset: number;
+}
+
+.projectName {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: end;
+  font-size: 2rem;
+  cursor: pointer;
+  padding-bottom: 50px;
+}
+.projectName:hover .projectName__title {
+  text-decoration: line-through;
+}
+.projectName__number::before {
+  counter-increment: number;
+  content: counter(number);
+}
+.projectName__title a {
+  color: #fff;
+  text-decoration: none;
 }
 
-/*=================ANIMATIONS=================*/
-/*Bounce animation*/
-.bounce {
-  -webkit-animation: bounceAnimation 2s infinite;
-  animation: bounceAnimation 2s infinite;
+/*=================FOOTER=================*/
+footer {
+  padding: 0 10vw;
 }
 
-@-webkit-keyframes bounceAnimation {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.footerContact__header {
+  font-family: "Syne", sans-serif;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  display: inline-block;
 }
-@keyframes bounceAnimation {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.footerContact__header h3::after {
+  content: "";
+  border-bottom: 10px solid #8a88fb;
+  width: 100%;
+  display: block;
+  margin: -18px auto;
+  margin-left: 2px;
 }
-/*End levitate animation*/
-/*Rotating animation*/
-.rotate {
-  -webkit-animation: rotateAnimation 1s infinite;
-  animation: rotateAnimation 1s infinite;
+.footerContact__email {
+  font-family: "Syne", sans-serif;
+  padding: 40px 0;
+  font-size: 1.5rem;
+  padding-top: 100px;
+}
+.footerContact__socials li {
+  display: inline-block;
+  margin-right: 30px;
+  padding-bottom: 100px;
+}
+.footerContact__socials li a {
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff;
+  transition: 0.2s;
+}
+.footerContact__socials li a:hover {
+  color: #8a88fb;
+  border-bottom: 1px solid #8a88fb;
 }
 
-@-webkit-keyframes rotateAnimation {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.footerCopyright {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(48, 48, 48);
+  border-top: 1px solid rgb(48, 48, 48);
+  padding: 70px 0;
 }
-@keyframes rotateAnimation {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/*End rotating animation*//*# sourceMappingURL=style.css.map */
+.footerCopyright > p:last-child {
+  color: #2e2d55 !important;
+}/*# sourceMappingURL=style.css.map */

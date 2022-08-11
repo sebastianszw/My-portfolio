@@ -1,0 +1,11 @@
+@media only screen and (max-width: 1200px) {
+  .myWorkContainer {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .headerTextContainer h1,
+.headerTextContainer span {
+    font-size: 5.5rem;
+  }
+}/*# sourceMappingURL=media.css.map */
