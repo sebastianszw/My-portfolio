@@ -1,11 +1,134 @@
-@media only screen and (max-width: 1200px) {
-  .myWorkContainer {
-    grid-template-columns: 1fr;
-  }
-}
 @media only screen and (min-width: 1600px) {
   .headerTextContainer h1,
 .headerTextContainer span {
     font-size: 5.5rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .headerTextContainer h1,
+.headerTextContainer span {
+    font-size: 3rem;
+  }
+  .portfolioContainer {
+    grid-template-columns: 1fr;
+  }
+  .columnLeft {
+    text-align: center;
+  }
+  .columnRight {
+    padding-top: 100px;
+  }
+  .projectName {
+    justify-content: center;
+  }
+  .footerContact {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .headerTextContainer h1,
+.headerTextContainer span {
+    font-size: 2rem;
+  }
+  .portfolioContainer h2 {
+    font-size: 2rem;
+  }
+  .projectName {
+    font-size: 1.5rem;
+  }
+  .projectName span {
+    font-size: 0.7rem;
+  }
+  .footerContact__header {
+    font-size: 1.5rem;
+  }
+  .footerContact__email {
+    font-size: 1rem;
+    padding-top: 50px;
+  }
+  .footerContact__socials li {
+    padding-bottom: 50px;
+    font-size: 0.8rem;
+  }
+  .footerCopyright {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 530px) {
+  nav img {
+    height: 30px !important;
+    width: auto !important;
+  }
+  .container {
+    padding: 80px 0;
+  }
+  .headerTextContainer h1,
+.headerTextContainer span {
+    font-size: 1.5rem;
+  }
+  .portfolioContainer h2 {
+    font-size: 1.5rem;
+  }
+  .portfolioContainer h2::after {
+    margin: -16px auto;
+    margin-left: 2px;
+  }
+  .projectName {
+    font-size: 1rem;
+  }
+  .projectName span {
+    font-size: 0.5rem;
+  }
+  .footerContact__header {
+    font-size: 1rem;
+  }
+  .footerContact__header h3::after {
+    margin: -15px auto;
+    margin-left: 2px;
+  }
+  .footerContact__email {
+    font-size: 0.8rem;
+    padding-top: 50px;
+  }
+  .footerContact__socials li {
+    padding-bottom: 50px;
+    font-size: 0.6rem;
+  }
+  .footerCopyright {
+    font-size: 0.6rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .headerTextContainer h1,
+.headerTextContainer span {
+    font-size: 1rem;
+  }
+  .portfolioContainer h2 {
+    font-size: 1rem;
+  }
+  .portfolioContainer h2::after {
+    margin: -15px auto;
+    margin-left: 2px;
+  }
+  .projectName {
+    font-size: 0.7rem;
+  }
+  .footerContact__header {
+    font-size: 0.8rem;
+  }
+  .footerContact__header h3::after {
+    margin: -14px auto;
+    margin-left: 2px;
+  }
+  .footerContact__email {
+    font-size: 0.6rem;
+    padding-top: 25px;
+  }
+  .footerContact__socials li {
+    padding-bottom: 25px;
+    font-size: 0.5rem;
+  }
+  .footerCopyright {
+    font-size: 0.5rem;
   }
 }/*# sourceMappingURL=media.css.map */
