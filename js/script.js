@@ -47,7 +47,7 @@ gsap.fromTo(".projectsContainer", { opacity: 0, y: 100 }, {
     scrollTrigger: ".portfolioContainer",
     opacity: 1,
     y: 0,
-    delay: 1.4,
+    delay: 1,
     ease: Power0.easeNone
 });
 
